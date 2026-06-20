@@ -514,7 +514,7 @@ async def cmd_start(m: Message):
         ],
         [
             InlineKeyboardButton(text="Store", callback_data="store"),
-            InlineKeyboardButton(text="Profile", callback_data="profile")
+            InlineKeyboardButton(text="Profile", callback_data="stats")
         ],
         [
             InlineKeyboardButton(text="Referral Program", callback_data="referral")
@@ -591,7 +591,7 @@ async def back_main(cq: CallbackQuery):
         ],
         [
             InlineKeyboardButton(text="Store", callback_data="store"),
-            InlineKeyboardButton(text="Profile", callback_data="profile")
+            InlineKeyboardButton(text="Profile", callback_data="stats")
         ],
         [
             InlineKeyboardButton(text="Referral Program", callback_data="referral")
@@ -2032,12 +2032,11 @@ async def callback_howto(cq: CallbackQuery):
     if not user:
         user = get_or_create_user(cq.from_user.id, cq.from_user.username)
     steps_text = (
-        f"<b>◍ Account Seller Bot</b>\n––––––——–––————––––——–––•\n"
-        f"<blockquote><b>👤 Name: </b>{cq.from_user.full_name}\n"
-        f"<b>💻 Username: </b>@{cq.from_user.username if cq.from_user.username else 'N/A'}\n"
-        f"<b>🆔 User ID:</b> {cq.from_user.id}\n"
-        f"<b>💰 Balance:</b> ₹{user.get('balance', 0.0):.2f}</blockquote>\n"
-        f"––––––——–––————––––——–––•\n •<b> Bot</b>: @{BOTUSER}\n• <b>Sales Log</b>: @{SALESLOG}"
+        f"<b>Profile</b>\n\n"
+        f"Name: </b>{cq.from_user.full_name}\n"
+        f"<b>Username:</b>@{cq.from_user.username if cq.from_user.username else 'N/A'}\n"
+        f"<b>User ID:</b>{cq.from_user.id}\n"
+        f"<b>Balance:</b> ₹{user.get('balance', 0.0):.2f}</blockquote>\n"
         
     )
 
