@@ -629,21 +629,19 @@ async def callback_buy(cq: CallbackQuery):
     user = get_or_create_user(cq.from_user.id, cq.from_user.username)  # Fetch user info
 
     text = (
-        f"🍷 <b>Buy Ready Telegram Accounts</b>:\n"
-        f"––––––—————––––——–––•\n"
-        f"<u>• One-click Telegram account purchase\n"
-        f"• 100% activation & code delivery\n"
-        f"• All accounts are clean [100% No Spam]\n"
-        f"• Request multiple codes for free</u>\n"
-        f"<b>• Total balance -</b> ₹{user['balance']}"
+        f"<b>Telegram Accounts</b>\n\n"
+        f"Server 1 —  Aged,fresh, manually uploaded accounts\n"
+        f"Server 2  —  Fresh numbers via automated API\n\n"
+        f"All accounts are clean [100% No Spam]\n"
+        f"Request multiple codes for free\n"
     )
 
     kb = InlineKeyboardBuilder()
     kb.row(
-        InlineKeyboardButton(text="◍ Server- 1", callback_data="buy_server1")
+        InlineKeyboardButton(text="Server — 1", callback_data="buy_server1")
     )
     kb.row(
-        InlineKeyboardButton(text="◍ Server- 2", callback_data="buy_server2")
+        InlineKeyboardButton(text="◍ Server — 2", callback_data="buy_server2")
     )
     kb.row(InlineKeyboardButton(text="▪️ Previous", callback_data="back_main"))
 
