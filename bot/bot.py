@@ -494,9 +494,9 @@ async def cmd_start(m: Message):
     
 # ================= Main Start Menu =================
     caption = (
-        f"<blockquote> Hey, {user_mention}!</blockquote>\n"
-        f"<b>𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 Account Robot- 𝖥𝖺𝗌𝗍𝖾𝗌𝗍 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖠𝖼𝖼𝗈𝗎𝗇𝗍 𝖲𝖾𝗅𝗅𝖾𝗋 𝖡𝗈𝗍🥂</b>\n\n"
-        f"<b>🚀 𝖤𝗇𝗃𝗈𝗒 𝖥𝖺𝗌𝗍 𝖠𝖼𝖼𝗈𝗎𝗇𝗍 𝖻𝗎𝗒𝗂𝗇𝗀 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾 !\n------------------------------------------------\n• Support - @{SUPPORT}\n• Sales - @{LOGS}</b>"
+        f"<b>Welcome, {user_mention}.</b>\n\n"
+        f"<i>Your gateway to Telegram accounts and services.</i>\n\n"
+        f"<b>Use the menu below to get started.</b>\n\n"
     )
 
     kb = InlineKeyboardMarkup(inline_keyboard=[
