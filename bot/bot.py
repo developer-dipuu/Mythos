@@ -2041,11 +2041,7 @@ async def callback_howto(cq: CallbackQuery):
 
     kb = InlineKeyboardBuilder()
     kb.row(
-        InlineKeyboardButton(text="▪️ Support", url=f"https://t.me/{OWNER}"),
-        InlineKeyboardButton(text="▪️ 𝙃𝙤𝙬 𝙩𝙤 𝙪𝙨𝙚", url=f"https://t.me/vthnet")
-    )
-    kb.row(
-        InlineKeyboardButton(text="▪️ Previous", callback_data="back_main")
+        InlineKeyboardButton(text="« Back", callback_data="back_main")
     )
     
     await cq.message.edit_text(steps_text, parse_mode="HTML", reply_markup=kb.as_markup())
