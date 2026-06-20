@@ -575,29 +575,27 @@ async def back_main(cq: CallbackQuery):
         f"<b>𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 Account Robot- 𝖥𝖺𝗌𝗍𝖾𝗌𝗍 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖠𝖼𝖼𝗈𝗎𝗇𝗍 𝖲𝖾𝗅𝗅𝖾𝗋 𝖡𝗈𝗍🥂</b>\n\n"
         f"<b>🚀 𝖤𝗇𝗃𝗈𝗒 𝖥𝖺𝗌𝗍 𝖠𝖼𝖼𝗈𝗎𝗇𝗍 𝖻𝗎𝗒𝗂𝗇𝗀 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾 !\n------------------------------------------------\n• Support - @{SUPPORT}\n• Sales - @{LOGS}</b>"
     )
-    kb = InlineKeyboardMarkup(inline_keyboard=[
+    kb = InlineKeyboardMarkup(
+    inline_keyboard=[
         [
-            InlineKeyboardButton(text="💸 Balance", callback_data="balance"),
-            InlineKeyboardButton(text="🛒 Buy Account", callback_data="buy_server1")
+            InlineKeyboardButton(
+                text="🌐 Open Web App",
+                web_app=WebAppInfo(url="https://your-domain.com")
+            )
         ],
         [
-            InlineKeyboardButton(text="🥂 Sell Account", callback_data="sell")
+            InlineKeyboardButton(text="Balance", callback_data="balance"),
+            InlineKeyboardButton(text="Buy Account", callback_data="buy_server1")
         ],
         [
-            InlineKeyboardButton(text="💳 Recharge", callback_data="recharge"),
-            InlineKeyboardButton(text="👤 Account", callback_data="stats")
+            InlineKeyboardButton(text="Sell Account", callback_data="sell")
         ],
-         [
-            InlineKeyboardButton(text="Redeem 🎉", callback_data="redeem"),
-            InlineKeyboardButton(text="📑 History", callback_data="history")
-            
-         ],
         [
-            InlineKeyboardButton(text="➕ More..", callback_data="more_menu"),
-            InlineKeyboardButton(text="⚡ Refer", callback_data="refer")
-    
+            InlineKeyboardButton(text="Add Funds", callback_data="recharge"),
+            InlineKeyboardButton(text="Account", callback_data="stats")
         ]
-    ])
+    ]
+    )
     await cq.message.edit_text(caption, parse_mode="HTML", reply_markup=kb)
     await cq.answer()
 
