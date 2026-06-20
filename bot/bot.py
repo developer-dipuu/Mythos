@@ -517,7 +517,7 @@ async def cmd_start(m: Message):
             InlineKeyboardButton(text="Profile", callback_data="stats")
         ],
         [
-            InlineKeyboardButton(text="Referral Program", callback_data="referral")
+            InlineKeyboardButton(text="Referral Program", callback_data="refer")
         ],
         [
             InlineKeyboardButton(text="Sell Accounts", callback_data="sell")
@@ -594,7 +594,7 @@ async def back_main(cq: CallbackQuery):
             InlineKeyboardButton(text="Profile", callback_data="stats")
         ],
         [
-            InlineKeyboardButton(text="Referral Program", callback_data="referral")
+            InlineKeyboardButton(text="Referral Program", callback_data="refer")
         ],
         [
             InlineKeyboardButton(text="Sell Accounts", callback_data="sell")
@@ -2073,7 +2073,7 @@ async def callback_refer(cq: CallbackQuery):
 
     # Message text
     text = (
-        f"Invite your friends to use the bot and earn 2% of every recharge they make!\n ––––––—————–––––———–––•\n"
+        f"Invite your friends to use the bot and earn 2% of every recharge they make!\n\n"
         f"🔗 <b>Your Referral Link:</b>\n<code>{refer_link}</code>"
     )
 
@@ -2081,13 +2081,13 @@ async def callback_refer(cq: CallbackQuery):
     kb = InlineKeyboardBuilder()
     kb.row(
         InlineKeyboardButton(
-            text="📤 Share Link",
+            text="Share Link",
             url=f"https://t.me/share/url?url={refer_link}&text=Join%20and%20earn%20with%20this%20bot!"
         )
     )
     kb.row(
         InlineKeyboardButton(
-            text="▪️ Back",
+            text="« Back",
             callback_data="back_main"
         )
     )
