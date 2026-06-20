@@ -29,6 +29,7 @@ import re
 from aiogram import types
 import random
 from aiogram.types import InputMediaVideo
+from aiogram.types import WebAppInfo
 from recharge_flow import register_recharge_handlers
 from mustjoin import check_join
 from config import BOT_TOKEN, ADMIN_IDS
