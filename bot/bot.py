@@ -53,6 +53,7 @@ UPDATES= "unicyrss"
 CHANNEL="CHANNEL"
 SALESLOG = "snn"
 ADMINLOG = " -1003781680393"
+LOGS = "signaturehero"
 # ================= Ban Middleware =================
 class BanCheckMiddleware(BaseMiddleware):
     async def __call__(
