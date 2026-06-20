@@ -523,7 +523,7 @@ async def cmd_start(m: Message):
             InlineKeyboardButton(text="Sell Accounts", callback_data="sell")
         ],
         [
-            InlineKeyboardButton(text="Support", callback_data="support")
+            InlineKeyboardButton(text="Support", callback_data="more_menu")
         ]
     ]
     )
@@ -539,14 +539,14 @@ async def more_menu(cq: CallbackQuery):
     kb = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Sales Log", url=f"https://t.me/shebroked")],
         [InlineKeyboardButton(text="📑 History", callback_data="history")],
-        [InlineKeyboardButton(text="Support", url=f"https://t.me/valriks")],
-        [InlineKeyboardButton(text="About Account", callback_data="stats")],
+        [InlineKeyboardButton(text="Support", url=f"https://t.me/helmage")],
+        [InlineKeyboardButton(text="Profile", callback_data="stats")],
         [InlineKeyboardButton(text="Refer & Earn", callback_data="refer")],
-        [InlineKeyboardButton(text="Contact Support", url=f"https://t.me/valriks")],
+        [InlineKeyboardButton(text="Contact Support", url=f"https://t.me/helmage")],
         [InlineKeyboardButton(text="How to Buy Account", url=f"https://t.me/vthnet")],
         [InlineKeyboardButton(text="How to Sell Account", url=f"https://t.me/vthnet")],
         [InlineKeyboardButton(text="How to Recharge", url=f"https://t.me/vthnet")],
-        [InlineKeyboardButton(text="⬅️ Back", callback_data="back_main")]
+        [InlineKeyboardButton(text="« Back", callback_data="back_main")]
     ])
 
     await cq.message.edit_text(
@@ -600,7 +600,7 @@ async def back_main(cq: CallbackQuery):
             InlineKeyboardButton(text="Sell Accounts", callback_data="sell")
         ],
         [
-            InlineKeyboardButton(text="Support", callback_data="support")
+            InlineKeyboardButton(text="Support", callback_data="more_menu")
         ]
     ]
     )
