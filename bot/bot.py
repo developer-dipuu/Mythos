@@ -658,7 +658,7 @@ async def callback_buy_server1(cq: CallbackQuery):
 # Server 2 shows alert: out of stock
 @dp.callback_query(lambda c: c.data == "buy_server2")
 async def callback_buy_server2(cq: CallbackQuery):
-    await cq.answer("⚠️ Currently this stock is out of stock!", show_alert=True)
+    await cq.answer("⚠️ Currently this server is in maintainence", show_alert=True)
 
 
 # ================= Country Menu with Pagination =================
