@@ -45,13 +45,13 @@ crypto_col = db["crypto_invoices"]
 withdrawals_col = db["withdrawals"]
 
 #--------- Config : don't use @
-BOTUSER = "quickcodes_bot"
-SUPPORT = "vthnet"
-USAGE = "shebroked"
-OWNER = "Valriks"
-UPDATES= "shebroked"
+BOTUSER = "TeleVaultSvsBot"
+SUPPORT = "unicursed"
+USAGE = "unicyrss"
+OWNER = "Hitman"
+UPDATES= "unicyrss"
 CHANNEL="CHANNEL"
-SALESLOG = "shebroked"
+SALESLOG = "snn"
 ADMINLOG = "-1003208353049"
 # ================= Ban Middleware =================
 class BanCheckMiddleware(BaseMiddleware):
