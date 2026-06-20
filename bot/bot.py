@@ -2036,7 +2036,7 @@ async def callback_howto(cq: CallbackQuery):
         f"Name: </b>{cq.from_user.full_name}\n"
         f"<b>Username:</b>@{cq.from_user.username if cq.from_user.username else 'N/A'}\n"
         f"<b>User ID:</b>{cq.from_user.id}\n"
-        f"<b>Balance:</b> ₹{user.get('balance', 0.0):.2f}</blockquote>\n"
+        f"<b>Balance:</b> ₹{user.get('balance', 0.0):.2f}\n"
         
     )
 
