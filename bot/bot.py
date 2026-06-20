@@ -2032,12 +2032,11 @@ async def callback_howto(cq: CallbackQuery):
     if not user:
         user = get_or_create_user(cq.from_user.id, cq.from_user.username)
     steps_text = (
-        f"<b>Profile</b>\n\n"
-        f"Name: </b>{cq.from_user.full_name}\n"
-        f"<b>Username:</b>@{cq.from_user.username if cq.from_user.username else 'N/A'}\n"
-        f"<b>User ID:</b>{cq.from_user.id}\n"
-        f"<b>Balance:</b> ₹{user.get('balance', 0.0):.2f}\n"
-        
+    f"<b>Profile</b>\n\n"
+    f"<b>Name:</b> {cq.from_user.full_name}\n"
+    f"<b>Username:</b> @{cq.from_user.username if cq.from_user.username else 'N/A'}\n"
+    f"<b>User ID:</b> {cq.from_user.id}\n"
+    f"<b>Balance:</b> ₹{user.get('balance', 0.0):.2f}\n"
     )
 
     kb = InlineKeyboardBuilder()
