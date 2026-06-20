@@ -12,10 +12,10 @@ BOTUSER = "TeleVaultSvsBot"
 WELCOME_TEXT = """
 <b>Access Restricted</b>
 
-<b><u>You must join our channel to use this bot.</u></b>
+<b><u><i>You must join our channel to use this bot.</i></u></b>
 
-1. <u><i>Tap Join Channel</i></u>
-2. <u><i>Tap I've Joined to verify</i></u>
+1.<i>Tap Join Channel</i>
+2.<i>Tap I've Joined to verify</i>
 """
 
 async def check_join(client, message: types.Message):
