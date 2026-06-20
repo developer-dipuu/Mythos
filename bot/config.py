@@ -18,7 +18,7 @@ ADMIN_IDS = [int(i) for i in _getenv("ADMIN_IDS", "8619127196", required=True).r
 API_ID = "21377358"
 API_HASH = "e05bc1f4f03839db7864a99dbf72d1cd"
 
-DATABASE_URL = _getenv("DATABASE_URL", "mongodb+srv://TeleVault:TeleVault@televault.6kr2f9n.mongodb.net/?appName=TeleVault")
+DATABASE_URL = _getenv("DATABASE_URL")
 
 
 
