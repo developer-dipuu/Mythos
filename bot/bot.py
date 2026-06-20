@@ -36,7 +36,7 @@ from config import BOT_TOKEN, ADMIN_IDS
 # ================= MongoDB Setup =================
 MONGO_URI = os.getenv("MONGO_URI") or "mongodb+srv:=Vth0"
 client = MongoClient(MONGO_URI)
-db = client["QuickCodes"]
+db = client["TeleVault"]
 users_col = db["users"]
 orders_col = db["orders"]
 countries_col = db["countries"]
@@ -501,26 +501,26 @@ async def cmd_start(m: Message):
 
     kb = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="💸 Balance", callback_data="balance"),
-            InlineKeyboardButton(text="🛒 Buy Account", callback_data="buy_server1")
+            InlineKeyboardButton(text="Balance", callback_data="balance"),
+            InlineKeyboardButton(text="Buy Account", callback_data="buy_server1")
         ],
         
         [
-            InlineKeyboardButton(text="🥂 Sell Account", callback_data="sell")
+            InlineKeyboardButton(text="Sell Account", callback_data="sell")
             
         ],
         [
-            InlineKeyboardButton(text="💳 Recharge", callback_data="recharge"),
-            InlineKeyboardButton(text="👤 Account", callback_data="stats")
+            InlineKeyboardButton(text="Add Funds", callback_data="recharge"),
+            InlineKeyboardButton(text="Account", callback_data="stats")
         ],
          [
-            InlineKeyboardButton(text="Redeem 🎉", callback_data="redeem"),
-            InlineKeyboardButton(text="📑 History", callback_data="history")
+            InlineKeyboardButton(text="Redeem", callback_data="redeem"),
+            InlineKeyboardButton(text="History", callback_data="history")
 
             ],
         [
-            InlineKeyboardButton(text="➕ More..", callback_data="more_menu"),
-            InlineKeyboardButton(text="⚡ Refer", callback_data="refer")
+            InlineKeyboardButton(text="More..", callback_data="more_menu"),
+            InlineKeyboardButton(text="Refer", callback_data="refer")
     
         ]
        
