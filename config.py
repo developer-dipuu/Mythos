@@ -15,8 +15,8 @@ def _getenv(name: str, default: str | None = None, required: bool = False) -> st
 MUST_JOIN_CHANNEL = "-1003972430511"
 BOT_TOKEN = _getenv("BOT_TOKEN", required=True)
 ADMIN_IDS = [int(i) for i in _getenv("ADMIN_IDS", "8619127196", required=True).replace(" ", "").split(",") if i]
-API_ID = "21377358"
-API_HASH = "e05bc1f4f03839db7864a99dbf72d1cd"
+API_ID = "32660355"
+API_HASH = "c01207b248ac94963597c2158d72d613"
 
 DATABASE_URL = _getenv("DATABASE_URL", "mongodb+srv://TeleVault:TeleVault@televault.6kr2f9n.mongodb.net/?appName=TeleVault")
 
